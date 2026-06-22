@@ -1,0 +1,31 @@
+{
+  "name": "novel-guardian",
+  "version": "1.0.2",
+  "description": "Trình bảo vệ liền mạch cho tiểu thuyết tiếng Việt — quét mâu thuẫn, phân tích nhịp, kiểm tra giọng văn",
+  "type": "module",
+  "bin": {
+    "ng": "./scripts/novel-guardian.mjs",
+    "novel-guardian": "./scripts/novel-guardian.mjs"
+  },
+  "scripts": {
+    "test": "node scripts/test-bible.mjs && node scripts/test-rules.mjs && node scripts/test-scanner.mjs && node scripts/test-style.mjs && node scripts/test-pacing.mjs",
+    "benchmark": "node scripts/benchmark.mjs"
+  },
+  "keywords": ["novel", "fiction", "continuity", "vietnamese", "writing", "bible", "pacing", "style"],
+  "author": "Tiểu Tâm × Nấng",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "scripts/novel-guardian.mjs",
+    "scripts/lib/",
+    "references/",
+    "SKILL.md",
+    "INTEGRATION.md",
+    "RELEASE.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ]
+}
