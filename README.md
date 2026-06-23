@@ -1,46 +1,30 @@
-# Novel Guardian 🛡️
+# novel-guardian — Continuity guardian for long-form fiction
 
-**Trình bảo vệ liền mạch cho tiểu thuyết tiếng Việt**
+> Keep your novel internally consistent across every chapter. Five modules track characters, scan for contradictions, analyze pacing, monitor style drift, and compile unified reports.
 
-Quét mâu thuẫn nhân vật/thời gian/thế giới, phân tích nhịp truyện, kiểm tra giọng văn — tất cả trong <1 giây.
+[![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-blueviolet)](https://github.com/NachaFromMars)
 
-## Tính Năng
+## Overview
+novel-guardian is a continuity engine for novelists who need their world to hold together across hundreds of pages. It maintains a structured story bible, scans chapters against 20 consistency rules, charts emotional pacing across 5 intensity levels, and tracks prose style over time. Built in pure JavaScript (Node.js ESM), no external API dependencies. Optimized for Vietnamese fiction.
 
-- **20 Continuity Rules** — phát hiện: nhân vật chết sống lại, dịch chuyển tức thời, vật phẩm trùng chủ
-- **5-Level Pacing** — TĨNH→DÂNG→CĂNG→CAO TRÀO→HẠ NHIỆT + biểu đồ ASCII
-- **Vietnamese Style** — từ vựng, giọng, lệch giọng detection
-- **Bible Manager** — CRUD 5 entity types
-- **8 CLI Commands** — init, scan, pacing, style, bible, status, report, help
-- **Zero Dependencies** — Pure Node.js ESM
+## Features
+| Module | What it does |
+|---|---|
+| **Bible** | Manage characters, locations, factions, items, events — search + export MD/JSON |
+| **Scanner** | 20 rules (timeline, character, world, plot) — scan 1 chapter, range, or full manuscript |
+| **Pacing** | 5 levels: TĨNH→DÂNG→CĂNG→CAO TRÀO→HẠ NHIỆT — ASCII chart + pattern detection (monotone/jump/wave) |
+| **Style** | Vocab/sentence/punctuation stats, drift detection, auto baseline |
+| **Report** | Combined continuity+pacing+style output — Markdown + JSON |
 
-## Cài Đặt
+## Usage / Quick Start
+Pure Node.js ESM — no install needed beyond Node. Drive conversationally with the trigger keywords below or call the CLI directly.
 
-```bash
-npm install -g novel-guardian
-ng --help
-```
+## Trigger Keywords (OpenClaw)
+novel guardian, kiểm tra liền mạch, quét mâu thuẫn, consistency check, character bible, pacing analysis, plot hole, continuity
 
-## Bắt Đầu Nhanh
-
-```bash
-ng init --name "Tiểu thuyết của bạn"
-ng bible create character --name "Nhân Vật" --status alive
-mkdir chapters && echo "Nội dung chương 1..." > chapters/ch01.md
-ng scan --chapter 1
-ng pacing
-ng report
-```
-
-## Tài Liệu
-
-- [SKILL.md](SKILL.md) — Hướng dẫn đầy đủ
-- [INTEGRATION.md](INTEGRATION.md) — Tích hợp Omni Forge Novel
-- [CHANGELOG.md](CHANGELOG.md) — Lịch sử phiên bản
-
-## License
-
-MIT — Xem [LICENSE](LICENSE)
+## Related Skills
+- [novel-master](https://github.com/NachaFromMars/novel-master) — full quality guardian + forge orchestrator
+- [novelcore-ai](https://github.com/NachaFromMars/novelcore-ai) — AI novel writing system
 
 ---
-
-*Protecting Vietnamese fiction from continuity chaos* 🦊
+Part of the [NachaFromMars](https://github.com/NachaFromMars) OpenClaw skill ecosystem.
